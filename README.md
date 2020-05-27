@@ -3,6 +3,8 @@
 
 PLEASE NOTE THAT THIS IS A MODIFIED VERSION OF THIS PROGRAM. IF YOU WANT TO DEPLOY YOUR SERVER, PLEASE USE THE ORIGINAL REPOSITORY.
 
+Currently deployed on: https://sweet-proxy.herokuapp.com/
+
 **CORS Anywhere** is a NodeJS proxy which adds CORS headers to the proxied request.
 
 The url to proxy is literally taken from the path, validated and proxied. The protocol
