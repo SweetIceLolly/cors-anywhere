@@ -35,7 +35,10 @@ cors_proxy.createServer({
     'x-heroku-queue-depth',
     'x-heroku-dynos-in-use',
     'x-request-start',
-    'origin',     // Remove 'origin' header since YouTube will detect this header
+
+    // Remove 'origin' and 'referer' header since YouTube may detect these headers
+    'origin',
+    'referer'
   ],
   redirectSameOrigin: true,
   httpProxyOptions: {
