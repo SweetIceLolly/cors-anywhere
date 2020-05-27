@@ -26,13 +26,16 @@ cors_proxy.createServer({
   requireHeader: ['origin', 'x-requested-with'],
   checkRateLimit: checkRateLimit,
   removeHeaders: [
-    'cookie',
-    'cookie2',
+    // Originally, 'cookie' and 'cookie2' headers are removed. But my API needs them.
+    //'cookie',
+    //'cookie2',
+    
     // Strip Heroku-specific headers
     'x-heroku-queue-wait-time',
     'x-heroku-queue-depth',
     'x-heroku-dynos-in-use',
     'x-request-start',
+    'origin',     // Remove 'origin' header since YouTube will detect this header
   ],
   redirectSameOrigin: true,
   httpProxyOptions: {
